@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const ContactCTA = () => {
 	return (
-		<section className="pt-10 bg-gray-200 relative">
+		<section id="contact" className="pt-10 bg-gray-200 relative">
 			{/* Background */}
 			<div className="absolute inset-0 z-0">
 				<Image

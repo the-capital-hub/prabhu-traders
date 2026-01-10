@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/constants/data";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Store, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
 	const { scrollY } = useScroll();
 	const [hidden, setHidden] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [activeLink, setActiveLink] = useState("#home");
 
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		const previous = scrollY.getPrevious();
@@ -22,6 +22,43 @@ const Navbar = () => {
 		}
 	});
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const sections = NAV_LINKS.map((link) => link.href.substring(1));
+			const scrollPosition = window.scrollY; // Offset for navbar
+
+			for (const section of sections) {
+				const element = document.getElementById(section);
+				if (element) {
+					const { offsetTop, offsetHeight } = element;
+					if (
+						scrollPosition >= offsetTop &&
+						scrollPosition < offsetTop + offsetHeight
+					) {
+						setActiveLink(`#${section}`);
+					}
+				}
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	const scrollToSection = (e, href) => {
+		e.preventDefault();
+		const targetId = href.substring(1);
+		const element = document.getElementById(targetId);
+		if (element) {
+			window.scrollTo({
+				top: element.offsetTop - 80, // Adjust for navbar height
+				behavior: "smooth",
+			});
+			setActiveLink(href);
+			setIsMobileMenuOpen(false);
+		}
+	};
+
 	return (
 		<motion.header
 			variants={{
@@ -32,8 +69,11 @@ const Navbar = () => {
 			transition={{ duration: 0.35, ease: "easeInOut" }}
 			className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md"
 		>
-			<div className="flex items-center justify-between px-6 py-4 md:px-12 max-w-7xl mx-auto">
-				<div className="flex items-center gap-2">
+			<div className="flex items-center justify-between px-6 py-4 md:px-12">
+				<div
+					className="flex items-center gap-2 cursor-pointer"
+					onClick={(e) => scrollToSection(e, "#home")}
+				>
 					<div className="bg-blue-600 p-1 rounded-md">
 						<Store className="text-white w-5 h-5" />
 					</div>
@@ -47,8 +87,9 @@ const Navbar = () => {
 						<Link
 							key={index}
 							href={link.href}
+							onClick={(e) => scrollToSection(e, link.href)}
 							className={`px-5 py-2 rounded-full text-sm transition-colors hover:bg-white/10 ${
-								index === 0
+								activeLink === link.href
 									? "bg-white text-black font-medium"
 									: "text-gray-300"
 							}`}
@@ -58,14 +99,8 @@ const Navbar = () => {
 					))}
 				</div>
 
-				<div className="hidden md:flex items-center gap-4">
-					<Link href="#" className="text-sm font-medium hover:underline">
-						Sign In
-					</Link>
-					<Button variant="outline" className="rounded-full px-6">
-						Sign up Free
-					</Button>
-				</div>
+				{/* Empty div to balance the flex layout since we removed the buttons */}
+				<div className="hidden md:block w-35"></div>
 
 				{/* Mobile Menu Toggle */}
 				<button
@@ -94,27 +129,16 @@ const Navbar = () => {
 								<Link
 									key={index}
 									href={link.href}
-									className="text-gray-600 hover:text-black font-medium py-2 transition-colors"
-									onClick={() => setIsMobileMenuOpen(false)}
+									className={`font-medium py-2 transition-colors ${
+										activeLink === link.href
+											? "text-blue-600"
+											: "text-gray-600 hover:text-black"
+									}`}
+									onClick={(e) => scrollToSection(e, link.href)}
 								>
 									{link.label}
 								</Link>
 							))}
-							<div className="pt-4 border-t border-gray-100 flex flex-col gap-3">
-								<Link
-									href="#"
-									className="text-center py-2 font-medium text-gray-600 hover:text-black"
-									onClick={() => setIsMobileMenuOpen(false)}
-								>
-									Sign In
-								</Link>
-								<Button
-									className="w-full rounded-full bg-black text-white hover:bg-gray-800"
-									onClick={() => setIsMobileMenuOpen(false)}
-								>
-									Sign up Free
-								</Button>
-							</div>
 						</div>
 					</motion.div>
 				)}

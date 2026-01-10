@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const StatsSection = () => {
 	return (
-		<section className="py-10 bg-gray-100">
-			<div className="px-10 mx-auto">
+		<section className="py-10 bg-gray-50">
+			<div className="px-10">
 				<motion.div
 					initial={{ y: 20, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
@@ -16,11 +16,11 @@ const StatsSection = () => {
 					{HERO_CONTENT.stats.map((stat, index) => (
 						<div
 							key={index}
-							className="text-center md:text-left md:border-r last:border-r-0 border-gray-200 pr-4"
+							className="flex flex-col items-center justify-center border border-gray-200 gap-4 md:gap-8 rounded-lg bg-white p-2 shadow-md"
 						>
-							<p className="text-center text-sm md:text-base font-bold text-gray-800">
+							<span className="text-center text-md md:text-lg font-semibold text-gray-800">
 								{stat}
-							</p>
+							</span>
 						</div>
 					))}
 				</motion.div>

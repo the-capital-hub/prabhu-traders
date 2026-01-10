@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const QualityAssurance = () => {
 	return (
-		<section className="py-10 bg-white px-6 md:px-0 overflow-hidden">
+		<section id="quality-assurance" className="py-10 bg-white px-6 md:px-0 overflow-hidden">
 			<div className="mx-auto max-w-7xl">
 				<div className="flex flex-col md:flex-row items-center gap-16">
 					{/* Image Side */}

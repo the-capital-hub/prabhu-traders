@@ -22,7 +22,7 @@ export const NAV_LINKS = [
 	{ label: "Home", href: "#home" },
 	{ label: "About Us", href: "#about" },
 	{ label: "Our Products", href: "#products" },
-	{ label: "Investors", href: "#investors" },
+	{ label: "Contact Us", href: "#contact" },
 ];
 
 export const HERO_CONTENT = {
@@ -271,44 +271,26 @@ export const CTA_CONTENT = {
 	description:
 		"Get in touch with Prabhu Traders today for bulk supply, export orders, or long-term sourcing partnerships.",
 	buttonText: "Contact Us",
-	image: "/images/contactimg.png", // Vegetable basket
+	image: "/images/contactimg.png",
 };
 
 export const FOOTER_LINKS = [
 	{
 		title: "Company",
 		links: [
-			{ label: "About Us", href: "#" },
-			{ label: "Careers", href: "#" },
-			{ label: "Press Kit", href: "#" },
-			{ label: "Contact", href: "#" },
+			{ label: "About Us", href: "#about" },
+			{ label: "Contact", href: "#contact" },
+			{ label: "Testimonials", href: "#testimonials" },
+			{ label: "Market Reach", href: "#market-reach" },
 		],
 	},
 	{
-		title: "Products",
+		title: "Explore",
 		links: [
-			{ label: "Rice", href: "#" },
-			{ label: "Pulses", href: "#" },
-			{ label: "Frozen Foods", href: "#" },
-			{ label: "Seafood", href: "#" },
-		],
-	},
-	{
-		title: "Resources",
-		links: [
-			{ label: "Blog", href: "#" },
-			{ label: "Newsletter", href: "#" },
-			{ label: "Events", href: "#" },
-			{ label: "Help Center", href: "#" },
-		],
-	},
-	{
-		title: "Legal",
-		links: [
-			{ label: "Terms", href: "#" },
-			{ label: "Privacy", href: "#" },
-			{ label: "Cookies", href: "#" },
-			{ label: "Licenses", href: "#" },
+			{ label: "Products", href: "#products" },
+			{ label: "Quality Assurance", href: "#quality-assurance" },
+			{ label: "Industries We Serve", href: "#industries-we-serve" },
+			{ label: "Our Trading Process", href: "#our-trading-process" },
 		],
 	},
 ];
