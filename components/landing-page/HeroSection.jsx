@@ -7,7 +7,10 @@ import Image from "next/image";
 
 const HeroSection = () => {
 	return (
-		<section className="relative min-h-screen flex flex-col justify-start overflow-hidden bg-linear-to-b from-white to-gray-100 pt-32 pb-12">
+		<section
+			id="home"
+			className="relative min-h-screen flex flex-col justify-start overflow-hidden bg-linear-to-b from-white to-gray-50 pt-32 pb-12"
+		>
 			{/* Background Image - Positioned in bottom 3/4 */}
 			<div className="absolute bottom-0 left-0 right-0 h-1/2 md:h-[90%] z-0">
 				<Image
@@ -41,7 +44,7 @@ const HeroSection = () => {
 					{HERO_CONTENT.subtitle}
 				</motion.p>
 
-				<motion.div
+				{/* <motion.div
 					initial={{ y: 20, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 0.6, delay: 0.4 }}
@@ -50,7 +53,7 @@ const HeroSection = () => {
 						{HERO_CONTENT.ctaText}
 						<ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
 					</Button>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</section>
 	);

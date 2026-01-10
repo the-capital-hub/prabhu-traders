@@ -6,7 +6,10 @@ import Image from "next/image";
 
 const IndustriesServed = () => {
 	return (
-		<section className="py-10 bg-[#FDFCF8] px-6 md:px-0 relative overflow-hidden">
+		<section
+			id="industries-we-serve"
+			className="py-10 bg-[#FDFCF8] px-6 md:px-0 relative overflow-hidden"
+		>
 			{/* Background */}
 			<div className="absolute inset-0 z-0">
 				<Image
@@ -31,7 +34,7 @@ const IndustriesServed = () => {
 					</motion.h2>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{INDUSTRIES_SERVED.map((industry, index) => {
 						return (
 							<motion.div
@@ -74,11 +77,11 @@ const IndustriesServed = () => {
 					})}
 				</div>
 
-				<div className="flex justify-center">
+				{/* <div className="flex justify-center">
 					<Button className="bg-[#333333] text-white rounded-full px-8 py-6">
 						View All
 					</Button>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

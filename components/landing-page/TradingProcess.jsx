@@ -11,7 +11,7 @@ import {
 
 const TradingProcess = () => {
 	return (
-		<section className="py-10 bg-white px-6 md:px-0">
+		<section id="our-trading-process" className="py-20 bg-gray-50 px-6 md:px-0">
 			<div className="mx-auto max-w-7xl">
 				<div className="text-center mb-10">
 					<motion.h2

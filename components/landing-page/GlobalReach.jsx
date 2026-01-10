@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const GlobalReach = () => {
 	return (
-		<section className="py-10 bg-white px-6 md:px-0">
+		<section id="market-reach" className="py-10 bg-white px-6 md:px-0">
 			<div className="mx-auto text-center max-w-7xl">
 				<div className="mb-10">
 					<motion.h2

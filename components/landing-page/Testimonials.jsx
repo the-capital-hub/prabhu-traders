@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Testimonials = () => {
 	return (
-		<section className="py-10 bg-white  px-6 md:px-0">
+		<section id="testimonials" className="py-10 bg-white  px-6 md:px-0">
 			<div className="mx-auto max-w-7xl">
 				<div className="text-center mb-16">
 					<motion.p
