@@ -113,6 +113,20 @@ export const PRODUCTS_CONTENT = [
 		image: "/images/product4.png",
 		highlights: [],
 	},
+	{
+		id: "granite",
+		category: "Granite – Premium Natural Stone Blocks",
+		description:
+			"Prabhu Traders specializes in the export of premium granite blocks from India to China, meeting the growing demand for high-quality natural stone used in construction, infrastructure, and luxury projects.",
+		highlights: [
+			"Black Galaxy Granite",
+			"Tan Brown Granite",
+			"Kashmir White Granite",
+		],
+		productRangeTitle: "Sourced From:",
+		tags: ["Rajasthan", "Andhra Pradesh", "Karnataka"],
+		image: "/images/product5.png",
+	},
 ];
 
 export const PROCESS_STEPS = [
