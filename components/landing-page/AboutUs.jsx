@@ -41,9 +41,9 @@ const AboutUs = () => {
 						</div>
 
 						<div className="md:w-1/2 relative h-80 md:min-h-100 w-full">
-							<div className="w-fit md:w-100 h-fit md:h-auto absolute top-0 right-0 ">
+							<div className="w-full md:w-full h-full md:h-auto absolute top-0 right-0 ">
 								<Image
-									src="/images/aboutimg.png"
+									src="/images/aboutimg1.png"
 									width={500}
 									height={500}
 									alt="Rice"

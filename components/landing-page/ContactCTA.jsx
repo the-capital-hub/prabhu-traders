@@ -3,6 +3,7 @@ import { CTA_CONTENT } from "@/constants/data";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 
 const ContactCTA = () => {
 	return (
@@ -28,13 +29,41 @@ const ContactCTA = () => {
 							viewport={{ once: true }}
 							className="w-full md:w-1/2 p-8 md:p-10 text-white bg-[#4CAF50]"
 						>
-							<h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+							<h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
 								{CTA_CONTENT.title}
 							</h2>
 							<p className="text-green-50 mb-8 text-lg md:max-w-md leading-relaxed">
 								{CTA_CONTENT.description}
 							</p>
-							<Button className="bg-[#333] hover:bg-black text-white rounded-full px-8 py-6 text-base shadow-lg transition-transform hover:scale-105">
+
+							{Array.isArray(CTA_CONTENT.contacts) &&
+								CTA_CONTENT.contacts.length > 0 && (
+									<div className="mt-6 space-y-3">
+										{CTA_CONTENT.contacts.map((c, idx) => {
+											const Icon =
+												c.type === "phone"
+													? Phone
+													: c.type === "email"
+														? Mail
+														: c.type === "whatsapp"
+															? MessageCircle
+															: MapPin;
+											return (
+												<div
+													key={idx}
+													className="flex items-center gap-3 bg-white/10 rounded-full px-4 py-3"
+												>
+													<Icon className="w-4 h-4 text-white" />
+													<span className="text-white text-sm">
+														{c.label}:{" "}
+														<span className="font-semibold">{c.value}</span>
+													</span>
+												</div>
+											);
+										})}
+									</div>
+								)}
+							<Button className="bg-[#333] hover:bg-black text-white rounded-full px-8 py-6 text-base shadow-lg transition-transform hover:scale-105 mt-10">
 								{CTA_CONTENT.buttonText}
 							</Button>
 						</motion.div>
