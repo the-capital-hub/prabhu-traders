@@ -1,31 +1,24 @@
 "use client";
 import Link from "next/link";
 import { NAV_LINKS } from "@/constants/data";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Store, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Navbar = () => {
 	const { scrollY } = useScroll();
-	const [hidden, setHidden] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [activeLink, setActiveLink] = useState("#home");
 
 	useMotionValueEvent(scrollY, "change", (latest) => {
-		const previous = scrollY.getPrevious();
-		if (latest > previous && latest > 150) {
-			setHidden(true);
-			setIsMobileMenuOpen(false); // Close mobile menu on scroll down
-		} else {
-			setHidden(false);
-		}
+		setScrolled(latest > 100);
 	});
 
 	useEffect(() => {
 		const handleScroll = () => {
 			const sections = NAV_LINKS.map((link) => link.href.substring(1));
-			const scrollPosition = window.scrollY; // Offset for navbar
+			const scrollPosition = window.scrollY;
 
 			for (const section of sections) {
 				const element = document.getElementById(section);
@@ -51,7 +44,7 @@ const Navbar = () => {
 		const element = document.getElementById(targetId);
 		if (element) {
 			window.scrollTo({
-				top: element.offsetTop - 80, // Adjust for navbar height
+				top: element.offsetTop - 80,
 				behavior: "smooth",
 			});
 			setActiveLink(href);
@@ -60,51 +53,55 @@ const Navbar = () => {
 	};
 
 	return (
-		<motion.header
-			variants={{
-				visible: { y: 0 },
-				hidden: { y: "-100%" },
-			}}
-			animate={hidden ? "hidden" : "visible"}
-			transition={{ duration: 0.35, ease: "easeInOut" }}
-			className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md"
+		<header
+			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled || isMobileMenuOpen
+					? "bg-white/90 backdrop-blur-md shadow-sm py-4"
+					: "bg-transparent py-6"
+				}`}
 		>
-			<div className="flex items-center justify-between px-6 py-4 md:px-12">
+			<div className="flex items-center justify-between px-6 md:px-12">
 				<div
 					className="flex items-center gap-2 cursor-pointer"
 					onClick={(e) => scrollToSection(e, "#home")}
 				>
-					<div className="bg-blue-600 p-1 rounded-md">
-						<Store className="text-white w-5 h-5" />
+					<div className={`p-1 rounded-md transition-colors duration-500 ${scrolled || isMobileMenuOpen ? "bg-black" : "bg-white"}`}>
+						<Store className={`w-5 h-5 transition-colors duration-500 ${scrolled || isMobileMenuOpen ? "text-white" : "text-black"}`} />
 					</div>
-					<span className="text-blue-600 font-bold text-lg">
+					<span className={`font-bold text-lg transition-colors duration-500 ${scrolled || isMobileMenuOpen ? "text-black" : "text-white"}`}>
 						Prabhu Traders
 					</span>
 				</div>
 
-				<div className="hidden md:flex items-center bg-black/80 rounded-full px-1 py-1 text-white">
+				<div className={`hidden md:flex items-center rounded-full px-1 py-1 transition-all duration-500 ${scrolled
+						? "bg-black/80 text-white"
+						: "bg-white/10 backdrop-blur-sm text-white border border-white/20"
+					}`}>
 					{NAV_LINKS.map((link, index) => (
 						<Link
 							key={index}
 							href={link.href}
 							onClick={(e) => scrollToSection(e, link.href)}
-							className={`px-5 py-2 rounded-full text-sm transition-colors hover:bg-white/10 ${
-								activeLink === link.href
-									? "bg-white text-black font-medium"
-									: "text-gray-300"
-							}`}
+							className={`px-5 py-2 rounded-full text-sm transition-all duration-300 hover:bg-white/10 ${activeLink === link.href
+									? scrolled
+										? "bg-white text-black font-medium"
+										: "bg-white/25 text-white font-medium"
+									: "text-gray-300 hover:text-white"
+								}`}
 						>
 							{link.label}
 						</Link>
 					))}
 				</div>
 
-				{/* Empty div to balance the flex layout since we removed the buttons */}
+				{/* Empty div to balance the flex layout */}
 				<div className="hidden md:block w-35"></div>
 
 				{/* Mobile Menu Toggle */}
 				<button
-					className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+					className={`md:hidden p-2 rounded-full transition-colors ${scrolled || isMobileMenuOpen
+							? "text-gray-600 hover:bg-gray-100"
+							: "text-white hover:bg-white/10"
+						}`}
 					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 				>
 					{isMobileMenuOpen ? (
@@ -129,11 +126,10 @@ const Navbar = () => {
 								<Link
 									key={index}
 									href={link.href}
-									className={`font-medium py-2 transition-colors ${
-										activeLink === link.href
-											? "text-blue-600"
+									className={`font-medium py-2 transition-colors ${activeLink === link.href
+											? "text-black bg-gray-100 px-4 rounded-lg"
 											: "text-gray-600 hover:text-black"
-									}`}
+										}`}
 									onClick={(e) => scrollToSection(e, link.href)}
 								>
 									{link.label}
@@ -143,7 +139,7 @@ const Navbar = () => {
 					</motion.div>
 				)}
 			</AnimatePresence>
-		</motion.header>
+		</header>
 	);
 };
 

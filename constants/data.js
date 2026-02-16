@@ -25,11 +25,22 @@ export const NAV_LINKS = [
 	{ label: "Contact Us", href: "#contact" },
 ];
 
+export const HERO_SLIDES = [
+	{
+		title: "Trusted Commodity Trading Partner For 30+ Years",
+		image: "/images/herobg.png",
+	},
+	{
+		title: "A Seasoned Trading Company With Over Three Decades Of Excellence In Sourcing, Supplying, And Exporting Premium Agri And Non-Agri Commodities",
+		image: "/images/herobg1.jpg",
+	},
+	{
+		title: "Powerful Network Across The Globe",
+		image: "/images/herobg2.jpg",
+	},
+];
+
 export const HERO_CONTENT = {
-	title: "Trusted Commodity Trading Partner For 30+ Years",
-	subtitle:
-		"Prabhu Traders Is A Seasoned Trading Company With Over Three Decades Of Excellence In Sourcing, Supplying, And Exporting Premium Agri And Non-Agri Commodities. We Specialize In Rice, Pulses, Frozen Food Products, Fish, And Prawns, Delivering Consistent Quality To Domestic And Global Markets.",
-	ctaText: "Request Product Catalogue",
 	stats: [
 		"30+ Years Of Industry Experience",
 		"Verified Quality Sourcing",
@@ -58,7 +69,7 @@ export const PRODUCTS_CONTENT = [
 		id: "rice",
 		category: "Agri Commodities – Rice",
 		description:
-			"We supply high-quality rice varieties widely demanded in domestic and export markets. Each batch is sourced from verified mills and processed under strict quality controls.",
+			"We supply high-quality rice varieties that are widely demanded in both domestic and international markets. Each batch is carefully sourced from verified mills, processed using modern milling techniques, and tested under strict quality control measures to ensure uniform grain size, purity, and consistent taste. Our rice is packed hygienically and supplied in bulk quantities, making it suitable for wholesalers, distributors, and large-scale buyers.",
 		highlights: [
 			"Premium milling standards",
 			"Uniform grain size",
@@ -72,7 +83,7 @@ export const PRODUCTS_CONTENT = [
 		id: "pulses",
 		category: "Agri Commodities – Pulses",
 		description:
-			"Our wide range of pulses is sourced from trusted growers and processors to meet consistent quality and nutrition standards.",
+			"Our wide range of pulses is sourced from trusted growers and certified processors to meet consistent quality, nutrition, and safety standards. We focus on delivering clean, well-graded, and carefully processed pulses that retain their natural taste and nutritional value. With reliable sourcing and bulk supply capabilities, our pulses are ideal for both domestic distribution and export markets.",
 		productRangeTitle: "Product Range Includes:",
 		tags: [
 			"Toor Dal",
@@ -88,7 +99,7 @@ export const PRODUCTS_CONTENT = [
 		id: "frozen",
 		category: "Food Products – Frozen Foods",
 		description:
-			"We supply frozen food products with advanced cold-chain handling, ensuring freshness and export-grade quality.",
+			"We supply a wide range of frozen food products handled through advanced cold-chain systems to preserve freshness, taste, and nutritional value. Our products are processed and packed in hygienic facilities, ensuring consistent quality and long shelf life. With a strong focus on food safety and export-grade standards, our frozen foods are suitable for bulk buyers, distributors, and international markets.",
 		productRangeTitle: "Product Categories:",
 		tags: [
 			"Frozen Vegetables",
@@ -102,7 +113,7 @@ export const PRODUCTS_CONTENT = [
 		id: "seafood",
 		category: "Seafood – Fish & Prawns",
 		description:
-			"Prabhu Traders supplies export-quality frozen fish and prawns sourced from certified fisheries and processed in hygienic facilities.",
+			"Prabhu Traders supplies export-quality frozen fish and prawns sourced from certified fisheries and processed in modern, hygienic facilities. Our seafood products are handled under strict quality and temperature controls to maintain freshness, texture, and taste. Available in IQF and block frozen formats, our seafood range is ideal for international buyers, importers, and large-scale food distributors.",
 		productRangeTitle: "Specialities Include:",
 		tags: [
 			"White Prawns",
@@ -117,7 +128,7 @@ export const PRODUCTS_CONTENT = [
 		id: "granite",
 		category: "Granite – Premium Natural Stone Blocks",
 		description:
-			"Prabhu Traders specializes in the export of premium granite blocks from India to China, meeting the growing demand for high-quality natural stone used in construction, infrastructure, and luxury projects.",
+			"Prabhu Traders specializes in the export of premium granite blocks from India to China, catering to the growing demand for high-quality natural stone used in construction, infrastructure, and luxury projects. Our granite is sourced from reputed quarries, carefully selected for color, strength, and finish, and supplied in bulk quantities to meet international project requirements.",
 		highlights: [
 			"Black Galaxy Granite",
 			"Tan Brown Granite",
@@ -215,66 +226,66 @@ export const GLOBAL_REACH = [
 
 export const TESTIMONIALS = [
 	{
-		name: "David Amunga",
-		handle: "@davidamunga_",
-		text: "This is a neat Canny alternative",
-		highlight: "neat Canny alternative",
+		name: "Rohan Sharma",
+		handle: "@rohan_sharma",
+		text: "Prabhu Traders delivered consistent quality and on-time shipments across multiple orders.",
+		highlight: "consistent quality and on-time shipments",
 		platform: "twitter",
 		image: "/images/avatar1.png",
 	},
 	{
-		name: "Anant Dubey",
-		handle: "@anant",
-		text: "This can be useful for small projects and businesses as well, to get proof of happy consumers and what they actually feel about the businesses.",
-		highlight: "useful for small projects",
+		name: "Ananya Iyer",
+		handle: "@ananya_iyer",
+		text: "Great team — transparent pricing and quick responses. Makes procurement straightforward.",
+		highlight: "transparent pricing and quick responses",
 		platform: "twitter",
 		image: "/images/avatar2.png",
 	},
 	{
-		name: "Clive Walkden",
-		handle: "@clivewalkden",
-		text: "Love this, current tools seem bloated and you pay for features you don't want, looking forward to seeing this progress",
-		highlight: "Love this, current tools seem bloated",
-		platform: "twitter",
+		name: "Mukesh Patel",
+		handle: "@mukesh_patel",
+		text: "Reliable sourcing for rice and pulses; documentation was spot on.",
+		highlight: "Reliable sourcing for rice and pulses",
+		platform: "linkedin",
 		image: "/images/avatar3.png",
 	},
 	{
-		name: "Emanuel Perez",
-		handle: "@emanuelperez",
-		text: "I dig this concept - Supahub helped us out a ton with prioritizing customer feedback!",
-		highlight: "prioritizing customer feedback",
-		platform: "linkedin",
+		name: "Priya Nair",
+		handle: "@priya_nair",
+		text: "We scaled orders confidently thanks to their QC and logistics support.",
+		highlight: "QC and logistics support",
+		platform: "twitter",
 		image: "/images/avatar4.png",
 	},
 	{
-		name: "Gereltuya Ba",
-		handle: "@gereltuyaba",
-		text: "Sharing a lovely little no-code tool for PMs I found today: Supahub! Better user retention when your users know what to expect in the future. An easy way to collect and manage user feedback.",
-		highlight: "Better user retention",
+		name: "Arjun Mehta",
+		handle: "@arjun_mehta",
+		text: "Value pricing without compromising quality — our repeat orders say it all.",
+		highlight: "Value pricing without compromising quality",
 		platform: "linkedin",
 		image: "/images/avatar5.png",
 	},
 	{
-		name: "Jaesung Park",
-		handle: "@jace_park98",
-		text: "Pricing plan seems to be promising. Frill and Canny was too expensive for collecting feedbacks for small products",
-		highlight: "promising",
+		name: "Kavya Rao",
+		handle: "@kavya_rao",
+		text: "Communication is clear, timelines realistic, and execution dependable.",
+		highlight: "Communication is clear",
 		platform: "twitter",
 		image: "/images/avatar6.png",
 	},
 	{
-		name: "Anastasiya Sidorovich",
-		handle: "@sidorere",
-		text: "Oh please do it! It's been pain in the a** to keep all feedback from different sources consolidated and updated. Especially when you manage a portfolio of products.",
-		highlight: "keep all feedback from different sources consolidated",
+		name: "Suresh Reddy",
+		handle: "@suresh_reddy",
+		text: "From sampling to final dispatch, the process was professional end to end.",
+		highlight: "professional end to end",
 		platform: "twitter",
 		image: "/images/avatar7.png",
 	},
 	{
-		name: "Carmen López",
-		handle: "@carmenlopez",
-		text: "When I worked as CSM, managing feedback was always challenging excited to see how Supahub simplifies the task.",
-		highlight: "Supahub simplifies the task",
+		name: "Neha Gupta",
+		handle: "@neha_gupta",
+		text: "Our export buyers appreciated the packaging and certifications.",
+		highlight: "packaging and certifications",
 		platform: "linkedin",
 		image: "/images/avatar8.png",
 	},
@@ -286,6 +297,12 @@ export const CTA_CONTENT = {
 		"Get in touch with Prabhu Traders today for bulk supply, export orders, or long-term sourcing partnerships.",
 	buttonText: "Contact Us",
 	image: "/images/contactimg.png",
+	contacts: [
+		{ label: "Phone", value: "+91 98765 43210", type: "phone" },
+		{ label: "Email", value: "sales@prabhutraders.in", type: "email" },
+		{ label: "WhatsApp", value: "+91 98765 43210", type: "whatsapp" },
+		{ label: "Address", value: "Sadar Bazar, New Delhi, India", type: "address" },
+	],
 };
 
 export const FOOTER_LINKS = [
