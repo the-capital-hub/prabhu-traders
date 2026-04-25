@@ -224,7 +224,7 @@ export const TESTIMONIALS = [
     text: "Prabhu Traders delivered consistent quality and on-time shipments across multiple orders.",
     highlight: "consistent quality and on-time shipments",
     platform: "twitter",
-    image: "/images/avatar1.png",
+    image: "/images/testimg1.jpg",
   },
   {
     name: "Ananya Iyer",
@@ -232,7 +232,7 @@ export const TESTIMONIALS = [
     text: "Great team — transparent pricing and quick responses. Makes procurement straightforward.",
     highlight: "transparent pricing and quick responses",
     platform: "twitter",
-    image: "/images/avatar2.png",
+    image: "/images/testimgg1.jpg",
   },
   {
     name: "Mukesh Patel",
@@ -240,7 +240,7 @@ export const TESTIMONIALS = [
     text: "Reliable sourcing for rice and pulses; documentation was spot on.",
     highlight: "Reliable sourcing for rice and pulses",
     platform: "linkedin",
-    image: "/images/avatar3.png",
+    image: "/images/testimg2.jpg",
   },
   {
     name: "Priya Nair",
@@ -248,7 +248,7 @@ export const TESTIMONIALS = [
     text: "We scaled orders confidently thanks to their QC and logistics support.",
     highlight: "QC and logistics support",
     platform: "twitter",
-    image: "/images/avatar4.png",
+    image: "/images/testimgg2.jpg",
   },
   {
     name: "Arjun Mehta",
@@ -256,7 +256,7 @@ export const TESTIMONIALS = [
     text: "Value pricing without compromising quality — our repeat orders say it all.",
     highlight: "Value pricing without compromising quality",
     platform: "linkedin",
-    image: "/images/avatar5.png",
+    image: "/images/testimg3.jpg",
   },
   {
     name: "Kavya Rao",
@@ -264,7 +264,7 @@ export const TESTIMONIALS = [
     text: "Communication is clear, timelines realistic, and execution dependable.",
     highlight: "Communication is clear",
     platform: "twitter",
-    image: "/images/avatar6.png",
+    image: "/images/testimgg3.jpg",
   },
   {
     name: "Suresh Reddy",
@@ -272,7 +272,7 @@ export const TESTIMONIALS = [
     text: "From sampling to final dispatch, the process was professional end to end.",
     highlight: "professional end to end",
     platform: "twitter",
-    image: "/images/avatar7.png",
+    image: "/images/testimg4.jpg",
   },
   {
     name: "Neha Gupta",
@@ -280,7 +280,7 @@ export const TESTIMONIALS = [
     text: "Our export buyers appreciated the packaging and certifications.",
     highlight: "packaging and certifications",
     platform: "linkedin",
-    image: "/images/avatar8.png",
+    image: "/images/testimgg4.jpg",
   },
 ];
 
@@ -291,12 +291,12 @@ export const CTA_CONTENT = {
   buttonText: "Contact Us",
   image: "/images/contactimg.png",
   contacts: [
-    { label: "Phone", value: "+91 98765 43210", type: "phone" },
-    { label: "Email", value: "sales@prabhutraders.in", type: "email" },
+    { label: "Phone", value: "+919949911232, +919100939323", type: "phone" },
+    { label: "Email", value: "gv@prabhutraders.in, kiran@prabhutraders.in", type: "email" },
     { label: "WhatsApp", value: "+91 98765 43210", type: "whatsapp" },
     {
       label: "Address",
-      value: "Sadar Bazar, New Delhi, India",
+      value: "PRABHU TRADERS PRIVATE LIMITED, H.NO 2-22-298/16/SSVI-S/VF, BHAGYA NAGAR COLONY, KPHB, KUKATPALLY HYDERABAD, TELANGANA, 500072",
       type: "address",
     },
   ],
