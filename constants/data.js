@@ -120,7 +120,7 @@ export const PRODUCTS_CONTENT = [
     "Frozen Ready Foods",
     "Processed Frozen Products",
   ],
-  image:"/images/frozen.png",
+  image:"/images/frozen2.png",
   // images: [
   //   "/images/drumstick.jpg",
   //   "/images/carrot.jpg",
@@ -320,11 +320,11 @@ export const CTA_CONTENT = {
   description:
     "Get in touch with Prabhu Traders today for bulk supply, export orders, or long-term sourcing partnerships.",
   buttonText: "Contact Us",
-  image: "/images/contactimg.png",
+  image: "/images/handshake.jpeg",
   contacts: [
     { label: "Phone", value: "+919949911232, +919100939323", type: "phone" },
     { label: "Email", value: "gv@prabhutraders.in, kiran@prabhutraders.in", type: "email" },
-    { label: "WhatsApp", value: "+91 98765 43210", type: "whatsapp" },
+    { label: "WhatsApp", value: "+91 9949911232", type: "whatsapp" },
     {
       label: "Address",
       value: "PRABHU TRADERS PRIVATE LIMITED, H.NO 2-22-298/16/SSVI-S/VF, BHAGYA NAGAR COLONY, KPHB, KUKATPALLY HYDERABAD, TELANGANA, 500072",

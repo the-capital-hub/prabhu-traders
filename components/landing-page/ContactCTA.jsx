@@ -7,7 +7,7 @@ import { CTA_CONTENT } from "@/constants/data";
 
 const ContactCTA = () => {
   return (
-    <section id="contact" className="pt-10 bg-gray-200 relative">
+    <section id="contact" className="pt-10  bg-gray-200 relative">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -63,7 +63,7 @@ const ContactCTA = () => {
                     })}
                   </div>
                 )}
-              <Button className="bg-[#333] hover:bg-black text-white rounded-full px-8 py-6 text-base shadow-lg transition-transform hover:scale-105 mt-10">
+              <Button className="bg-[#333] cursor-pointer hover:bg-black text-white rounded-full px-8 py-6 text-base shadow-lg transition-transform hover:scale-105 mt-10">
                 {CTA_CONTENT.buttonText}
               </Button>
             </motion.div>
@@ -73,7 +73,7 @@ const ContactCTA = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="w-full md:w-1/2 h-full flex justify-end"
+              className="w-full md:w-1/2 h-[20%] flex justify-end"
             >
               {/* Basket Image */}
               <Image
@@ -81,7 +81,7 @@ const ContactCTA = () => {
                 width={500}
                 height={300}
                 alt="Vegetable Basket"
-                className="w-full max-w-125 h-auto object-cover"
+                className="w-full max-w-250 relative md:left-10 md:bottom-16 h-auto object-cover"
               />
             </motion.div>
           </div>
