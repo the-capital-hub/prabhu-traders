@@ -82,54 +82,22 @@ const ProductCategories = () => {
               </motion.div>
 
               {/* Image / Collage */}
-              <motion.div
-                initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="md:w-1/2 w-full"
-              >
-                {product.id !== "frozen" ? (
-                  <div className="relative rounded-3xl overflow-hidden shadow-xl h-75 md:h-100">
-                    <Image
-                      src={product.image}
-                      alt={product.category}
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                ) : (
-                  <div className="flex flex-col gap-3 h-75 md:h-100">
-
-                    <div className="grid grid-cols-4 gap-3 flex-1">
-                      {product.images.slice(0, 4).map((img, i) => (
-                        <div key={i} className="relative overflow-hidden rounded-xl">
-                          <Image
-                            src={img}
-                            alt={`frozen-top-${i}`}
-                            fill
-                            className="object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-3 flex-1">
-                      {product.images.slice(4, 7).map((img, i) => (
-                        <div key={i} className="relative overflow-hidden rounded-xl">
-                          <Image
-                            src={img}
-                            alt={`frozen-bottom-${i}`}
-                            fill
-                            className="object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                        </div>
-                      ))}
-                    </div>
-
-                  </div>
-                )}
-              </motion.div>
+            <motion.div
+  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="md:w-1/2 w-full"
+>
+  <div className="relative rounded-3xl overflow-hidden shadow-xl h-75 md:h-100">
+    <Image
+      src={product.image}
+      alt={product.category}
+      fill
+      className="object-cover transition-transform duration-500 hover:scale-105"
+    />
+  </div>
+</motion.div>
             </div>
           ))}
         </div>

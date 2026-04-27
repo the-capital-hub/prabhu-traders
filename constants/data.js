@@ -1,3 +1,4 @@
+import { image } from "framer-motion/client";
 import {
   Anchor,
   Globe,
@@ -119,15 +120,16 @@ export const PRODUCTS_CONTENT = [
     "Frozen Ready Foods",
     "Processed Frozen Products",
   ],
-  images: [
-    "/images/drumstick.jpg",
-    "/images/carrot.jpg",
-    "/images/pea.jpg",
-    "/images/jackfruit.jpeg",
-    "/images/mixveg.jpg",
-    "/images/okra.jpg",
-    "/images/beetroot.jpg",
-  ],
+  image:"/images/frozen.png",
+  // images: [
+  //   "/images/drumstick.jpg",
+  //   "/images/carrot.jpg",
+  //   "/images/pea.jpg",
+  //   "/images/jackfruit.jpeg",
+  //   "/images/mixveg.jpg",
+  //   "/images/okra.jpg",
+  //   "/images/beetroot.jpg",
+  // ],
 
   highlights: [],
 },
