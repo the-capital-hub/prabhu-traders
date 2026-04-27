@@ -13,23 +13,26 @@ const QualityAssurance = () => {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row items-center gap-16">
           {/* Image Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:w-1/2 relative"
-          >
-            <div className="relative z-10 overflow-hidden">
-              <Image
-                src={QUALITY_CONTENT.image}
-                width={800}
-                height={600}
-                alt="Quality Assurance"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </motion.div>
+         <motion.div
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="md:w-1/2 relative"
+>
+  {/* Green Background */}
+  <div className="absolute -left-10 -top-10 w-[80%] h-[125%] bg-green-600 rounded-lg z-0" />
+
+  <div className="relative z-10 overflow-hidden rounded-lg">
+    <Image
+      src={QUALITY_CONTENT.image}
+      width={800}
+      height={600}
+      alt="Quality Assurance"
+      className="w-full h-auto object-cover"
+    />
+  </div>
+</motion.div>
 
           {/* Text Side */}
           <motion.div
