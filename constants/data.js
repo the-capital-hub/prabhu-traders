@@ -88,20 +88,49 @@ export const PRODUCTS_CONTENT = [
     image: "/images/product2.png",
     highlights: [],
   },
-  {
-    id: "frozen",
-    category: "Food Products – Frozen Foods",
-    description:
-      "We supply a wide range of frozen food products handled through advanced cold-chain systems to preserve freshness, taste, and nutritional value. Our products are processed and packed in hygienic facilities, ensuring consistent quality and long shelf life. With a strong focus on food safety and export-grade standards, our frozen foods are suitable for bulk buyers, distributors, and international markets.",
-    productRangeTitle: "Product Categories:",
-    tags: [
-      "Frozen Vegetables",
-      "Frozen Ready Foods",
-      "Processed Frozen Products",
+   {
+    id: "sugar",
+    category: "Agri Commodities – Refined Cane Sugar",
+    description:"We supply premium-quality refined cane sugar that meets both domestic and international standards. Sourced from trusted sugar mills and processed using advanced refining techniques, our sugar ensures high purity, uniform crystal size, and consistent sweetness. Each batch undergoes strict quality checks for moisture, color, and purity, making it ideal for food processing, beverages, pharmaceuticals, and industrial applications. Our refined sugar is hygienically packed and available in bulk quantities to cater to wholesalers, distributors, and large-scale buyers.",
+    productRangeTitle: "Product Range Includes:",
+    // tags: [
+    //   // "Toor Dal",
+    //   // "Chana Dal",
+    //   // "Moong Dal",
+    //   // "Urad Dal",
+    //   // "Other regional pulse varieties",
+    // ],
+    image: "/images/Refined-sugar.png",
+    highlights: [
+      "High purity and consistent quality",
+      "Uniform crystal size",
+      "Low moisture content",
+      "Hygienic and export-grade packaging",
     ],
-    image: "/images/product3.png",
-    highlights: [],
   },
+ {
+  id: "frozen",
+  category: "Food Products – Frozen Foods",
+  description:
+    "We supply a wide range of frozen food products handled through advanced cold-chain systems to preserve freshness, taste, and nutritional value. Our products are processed and packed in hygienic facilities, ensuring consistent quality and long shelf life. With a strong focus on food safety and export-grade standards, our frozen foods are suitable for bulk buyers, distributors, and international markets.",
+  productRangeTitle: "Product Categories:",
+  tags: [
+    "Frozen Vegetables",
+    "Frozen Ready Foods",
+    "Processed Frozen Products",
+  ],
+  images: [
+    "/images/drumstick.jpg",
+    "/images/carrot.jpg",
+    "/images/pea.jpg",
+    "/images/jackfruit.jpeg",
+    "/images/mixveg.jpg",
+    "/images/okra.jpg",
+    "/images/beetroot.jpg",
+  ],
+
+  highlights: [],
+},
   {
     id: "seafood",
     category: "Seafood – Fish & Prawns",
@@ -200,13 +229,13 @@ export const QUALITY_CONTENT = {
     "At Prabhu Traders, quality is not negotiable. Every consignment undergoes:",
   points: [
     "Batch traceability",
-    "Moisture & purity checks",
+    // "Moisture & purity checks",
     "Multi-stage quality inspection",
     "Export-grade packaging standards",
     "Cold-chain compliance for frozen products",
   ],
   footer: "Our reputation is built on consistent quality and reliable supply.",
-  image: "/images/qualityimg.png",
+  image: "/images/image2.png",
 };
 
 export const GLOBAL_REACH = [
